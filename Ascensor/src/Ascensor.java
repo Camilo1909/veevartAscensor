@@ -82,28 +82,28 @@ public class Ascensor {
 
     public static void ascensorBajando(ArrayList<Integer> newStopFloors, int startFloor){
 
-        System.out.println("Elevador descendiendo");
+        System.out.println("Ascensor descendiendo");
 
         //Recorremos el edificio
         for (int i = actualFloor; i > 0; i--) {
-            System.out.println("El elevador se encuentra en el piso: " + actualFloor);
+            System.out.println("El Ascensor se encuentra en el piso: " + actualFloor);
 
             //Verificamos si el ascensor esta en el piso donde debe parar
             for(int j = 0; j<newStopFloors.size();j++){
                 if (newStopFloors.get(j) == actualFloor){
-                    System.out.println("Elevador se detiene");
+                    System.out.println("Ascensor se detiene");
                 }
             }
             //El ascensor sigue bajando
             if (actualFloor  > 0){
-                System.out.println("Elevador descendiendo");
+                System.out.println("Ascensor descendiendo");
                 actualFloor--;
             }
 
             //Al llegar al ultimo piso el ascensor para
             if (actualFloor == 1){
-                System.out.println("El elevador se encuentra en el piso: " + actualFloor);
-                System.out.println("Elevador se detiene");
+                System.out.println("El Ascensor se encuentra en el piso: " + actualFloor);
+                System.out.println("Ascensor se detiene");
                 break;
             }
         }
@@ -112,18 +112,18 @@ public class Ascensor {
 
     public static void ascensorSubiendo(ArrayList<Integer>  newStopFloors, int startFloor){
 
-        System.out.println("El elevador se encuentra en el piso: " + actualFloor);
-        System.out.println("Elevador subiendo");
+        System.out.println("El Ascensor se encuentra en el piso: " + actualFloor);
+        System.out.println("Ascensor subiendo");
         actualFloor += 1;
 
         //Recorremos el edificio
         for (int i = startFloor; i < buildingFloors.length; i++) {
-            System.out.println("El elevador se encuentra en el piso: " + actualFloor);
+            System.out.println("El Ascensor se encuentra en el piso: " + actualFloor);
             for(int j = 0; j<newStopFloors.size();j++){
 
                 //Verificamos si el ascensor esta en el piso donde debe parar
                 if (newStopFloors.get(j) == actualFloor){
-                    System.out.println("Elevador se detiene");
+                    System.out.println("Ascensor se detiene");
                     if(j+1<stopFloors.size()){
                         //Verificamos que no este repetido en el Arraylist el piso donde paro, ademas lo eliminamos de los pisos por parar
                         if(newStopFloors.get(j) == newStopFloors.get(j+1)){
@@ -145,7 +145,7 @@ public class Ascensor {
 
             //El ascensor sigue subiendo
             if (actualFloor < buildingFloors.length){
-                System.out.println("Elevador subiendo");
+                System.out.println("Ascensor subiendo");
                 actualFloor++;
             }
         }
