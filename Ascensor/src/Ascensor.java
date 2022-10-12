@@ -62,7 +62,7 @@ public class Ascensor {
 
     public static void fun (int[] floors, int startFloor, HashMap<Integer,Integer> newsFloors  ) {
 
-        //createStopFloors(floors,newsFloors);
+        createStopFloors(floors,newsFloors);
         System.out.println(stopFloors.toString());
         actualFloor = startFloor;
         Collections.sort(stopFloors);
